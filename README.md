@@ -20,7 +20,7 @@ class Klever:
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=K1hqAA063oo">
-    <img src="https://img.shields.io/badge/🎷_now_coding_to-1950s_jazz_noir_%C2%B7_rainy_diner_at_midnight-1a3a6b?style=for-the-badge" alt="Now coding to" />
+    <img src="https://img.shields.io/badge/▶_press_play-jazz_noir_on_loop_while_I_code-1a3a6b?style=for-the-badge&logo=youtube&logoColor=white" alt="Press play — jazz noir on loop while I code" />
   </a>
 </p>
 
