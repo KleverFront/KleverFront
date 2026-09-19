@@ -70,6 +70,8 @@ Most of my day-to-day work lives in private company repositories, so here's what
 
 ![snake gif](https://raw.githubusercontent.com/KleverFront/KleverFront/output/github-contribution-grid-snake-dark.svg)
 
+<p align="center"><sub>🐍 chasing 900+ commits and counting</sub></p>
+
 ---
 
 
