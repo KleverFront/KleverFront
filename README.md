@@ -67,13 +67,6 @@ Most of my day-to-day work lives in private company repositories, so here's what
 ---
 
 
-### 📈 GitHub Stats
-
-![Klever's GitHub stats](https://github-readme-stats.vercel.app/api?username=KleverFront&show_icons=true&title_color=1a3a6b&icon_color=1a3a6b)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=KleverFront&layout=compact&title_color=1a3a6b)
-
----
-
 <p align="center">
   📫 <b>kleverontaneda@gmail.com</b> ·
   <a href="https://www.linkedin.com/in/klever-ontaneda-loja-ecuador">LinkedIn</a> ·
