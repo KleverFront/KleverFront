@@ -19,10 +19,16 @@ class Klever:
 ```
 
 <p align="center">
+  <img src="assets/turntable.gif" width="260" alt="spinning turntable" />
+</p>
+
+<p align="center">
   <a href="https://www.youtube.com/watch?v=K1hqAA063oo">
     <img src="https://img.shields.io/badge/▶_press_play-jazz_noir_on_loop_while_I_code-1a3a6b?style=for-the-badge&logo=youtube&logoColor=white" alt="Press play — jazz noir on loop while I code" />
   </a>
 </p>
+
+<p align="center"><sub>🎚️ turntable GIF by Shing02</sub></p>
 
 ---
 
