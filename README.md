@@ -60,13 +60,11 @@ Most of my day-to-day work lives in private company repositories, so here's what
 
 ---
 
-<!-- SNAKE: se activa cuando agreguemos el GitHub Action (necesita scope 'workflow')
 ### 🐍 Watch my commits get eaten
 
 ![snake gif](https://raw.githubusercontent.com/KleverFront/KleverFront/output/github-contribution-grid-snake-dark.svg)
 
 ---
--->
 
 
 ### 📈 GitHub Stats
