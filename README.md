@@ -6,6 +6,7 @@
 
 <br/>
 
+<a href="https://portafolio.kleverontaneda.workers.dev"><img src="https://img.shields.io/badge/Portfolio-One_night_at_the_club-ffcf70?style=for-the-badge&logo=cloudflare&logoColor=black" alt="Portfolio" /></a>
 <a href="mailto:kleverontaneda@gmail.com"><img src="https://img.shields.io/badge/Email-kleverontaneda%40gmail.com-1a3a6b?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 <a href="https://www.linkedin.com/in/klever-ontaneda-loja-ecuador"><img src="https://img.shields.io/badge/LinkedIn-Klever_Ontaneda-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <img src="https://img.shields.io/badge/Open_to-Remote_Backend_Roles-2ea043?style=for-the-badge" alt="Open to remote backend roles" />
@@ -17,6 +18,8 @@
 ## About
 
 Backend engineer based in Loja, Ecuador. For the past two years I have designed, built and operated the production ERP of a multi-branch pharmacy chain: purchasing, inventory, point of sale, electronic invoicing and the integrations that tie them together.
+
+Take a walk through my work in the interactive portfolio: **[One night at the club](https://portafolio.kleverontaneda.workers.dev)**.
 
 I care about correctness under real load, data that reconciles to the cent, and automation that runs every night without anyone noticing.
 
