@@ -1,27 +1,35 @@
 """Render the contribution calendar as an animated rainy isometric city.
 
-Usage: GITHUB_TOKEN=... python3 scripts/skyline.py <user> <output.svg>
+Usage: python3 scripts/skyline.py <user> <output.svg>
+
+Reads the public contributions page, which includes private contributions when
+the profile setting allows it (the Actions GITHUB_TOKEN cannot see those via GraphQL).
 """
-import json
+import datetime
 import os
 import random
+import re
 import sys
 import urllib.request
 
-QUERY = "query($u:String!){user(login:$u){contributionsCollection{contributionCalendar{weeks{contributionDays{contributionCount}}}}}}"
-
 
 def fetch(user):
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=json.dumps({"query": QUERY, "variables": {"u": user}}).encode(),
-        headers={"Authorization": f"bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json"},
-    )
-    data = json.load(urllib.request.urlopen(req, timeout=30))
-    if "errors" in data:
-        sys.exit(f"GitHub API error: {data['errors']}")
-    weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-    return [[d["contributionCount"] for d in w["contributionDays"]] + [0] * (7 - len(w["contributionDays"])) for w in weeks]
+    url = f"https://github.com/users/{user}/contributions"
+    html = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "skyline"}), timeout=30).read().decode()
+    dates = dict(re.findall(r'data-date="([\d-]+)" id="(contribution-day-component-[\d-]+)"', html))
+    dates = {cid: d for d, cid in dates.items()}
+    counts = {}
+    for cid, text in re.findall(r'for="(contribution-day-component-[\d-]+)"[^>]*>([^<]*)</tool-tip>', html):
+        m = re.match(r"(\d+) contribution", text)
+        counts[dates[cid]] = int(m.group(1)) if m else 0
+    if not counts:
+        sys.exit(f"No contribution data found at {url}")
+    days = sorted(datetime.date.fromisoformat(d) for d in counts)
+    start = days[0] - datetime.timedelta(days=(days[0].weekday() + 1) % 7)  # Sunday-based weeks
+    weeks = [[0] * 7 for _ in range((days[-1] - start).days // 7 + 1)]
+    for d in days:
+        weeks[(d - start).days // 7][(d.weekday() + 1) % 7] = counts[d.isoformat()]
+    return weeks
 
 SX, SY, MAXH = 9, 4.5, 70
 
@@ -107,6 +115,7 @@ THEME = dict(sky=[(0, "#0b0e14"), (1, "#1b2230")], windows="#ffcf70", rain=1, fo
 
 if __name__ == "__main__":
     user, path = sys.argv[1], sys.argv[2]
+    svg = city(fetch(user), THEME)  # render before touching the file so a failed fetch keeps the old one
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w") as f:
-        f.write(city(fetch(user), THEME))
+        f.write(svg)

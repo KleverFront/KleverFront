@@ -18,8 +18,6 @@ jobs:
 
       - name: generate skyline
         run: python3 scripts/skyline.py "${{ github.repository_owner }}" dist/skyline.svg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: push skyline to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
