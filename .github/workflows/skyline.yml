@@ -1,4 +1,4 @@
-name: generate snake
+name: generate skyline
 
 on:
   schedule:
@@ -14,15 +14,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: generate snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - uses: actions/checkout@v4
 
-      - name: push snake to output branch
+      - name: generate skyline
+        run: python3 scripts/skyline.py "${{ github.repository_owner }}" dist/skyline.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: push skyline to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output

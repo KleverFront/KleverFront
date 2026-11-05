@@ -1,82 +1,97 @@
-<h1 align="center">Hi, I'm Klever Ontaneda 👋</h1>
-<p align="center"><b>Backend Developer · Python · Django · Odoo</b></p>
-<p align="center"><i>I build the systems that keep a pharmacy chain running — from the cash register to the warehouse.</i></p>
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0d1117,100:1a3a6b&text=Klever%20Ontaneda&fontColor=ffffff&fontSize=44&fontAlignY=36&desc=Backend%20Engineer%20%C2%B7%20Python%20%C2%B7%20Odoo%20%C2%B7%20PostgreSQL&descAlignY=58&descSize=16" alt="Klever Ontaneda — Backend Engineer" width="100%" />
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3500&pause=900&color=7AA2F7&center=true&vCenter=true&width=640&lines=I+build+the+systems+behind+a+pharmacy+chain.;From+the+cash+register+to+the+warehouse.;ERP+%C2%B7+Integrations+%C2%B7+Automation+at+scale." alt="Typing headline" /></a>
+
+<br/>
+
+<a href="mailto:kleverontaneda@gmail.com"><img src="https://img.shields.io/badge/Email-kleverontaneda%40gmail.com-1a3a6b?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/klever-ontaneda-loja-ecuador"><img src="https://img.shields.io/badge/LinkedIn-Klever_Ontaneda-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<img src="https://img.shields.io/badge/Open_to-Remote_Backend_Roles-2ea043?style=for-the-badge" alt="Open to remote backend roles" />
+
+</div>
 
 ---
+
+## About
+
+Backend engineer based in Loja, Ecuador. For the past two years I have designed, built and operated the production ERP of a multi-branch pharmacy chain: purchasing, inventory, point of sale, electronic invoicing and the integrations that tie them together.
+
+I care about correctness under real load, data that reconciles to the cent, and automation that runs every night without anyone noticing.
 
 ```python
 class Klever:
-    role  = "Backend Developer"
-    stack = ["Python", "Django", "Odoo 17", "PostgreSQL", "Docker"]
-    based = "Loja, Ecuador 🇪🇨"
-
-    def daily(self):
-        while shipping_to_production:
-            self.build(erp="runs a pharmacy chain", scale="100k+ products")
-            self.integrate(systems="Odoo <-> SRI <-> external ERP")
-            self.on_repeat("1950s jazz noir — rainy diner at midnight")  # 🌧️🎷
-            # every line shipped with this playing in the background
+    role     = "Backend Engineer"
+    stack    = ["Python", "Django", "Odoo 17", "PostgreSQL", "Docker", "AWS"]
+    location = "Loja, Ecuador (UTC-5)"
+    focus    = ["ERP architecture", "System integration", "Data integrity", "Automation"]
 ```
 
-<p align="center">
-  <img src="assets/turntable.gif" width="260" alt="spinning turntable" />
-</p>
+---
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=K1hqAA063oo" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/▶_press_play-jazz_noir_on_loop_while_I_code-1a3a6b?style=for-the-badge&logo=youtube&logoColor=white" alt="Press play — jazz noir on loop while I code" />
-  </a>
-</p>
+## Impact
 
-<p align="center"><sub>🎚️ turntable GIF by Shing02</sub></p>
+<div align="center">
+
+| 2+ years | 900+ | 100k+ | Dozens |
+|:---:|:---:|:---:|:---:|
+| running a production ERP | commits shipped | products synchronized | warehouses on nightly automation |
+
+</div>
 
 ---
 
-### 📊 By the numbers
+## Selected Work
 
-`🏥 2+ yrs on a production ERP` · `🚀 900+ commits shipped` · `📦 100k+ products synced` · `🌙 nightly automation across dozens of warehouses`
+Most of my work lives in private company repositories. These are systems I designed and shipped to production.
 
----
-
-### 🛠️ Tech I work with
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
-![Odoo](https://img.shields.io/badge/Odoo-714B67?style=flat&logo=odoo&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+| System | What it does |
+|---|---|
+| **Statistical Replenishment Engine** | Max/min stock model with safety stock, reorder point and per-warehouse coverage. Runs as a nightly job that creates and updates replenishment rules for hundreds of thousands of products. |
+| **SRI E-Invoicing Import (Ecuador)** | Parses authorized XML invoices, reconciles VAT, ICE and withholdings, and validates against the authorized total with cent-level auto-correction on posting. |
+| **Odoo ↔ External ERP Integration + Offline POS** | Two-way REST sync of products, purchase orders, withholdings and inter-warehouse transfers, plus an offline point of sale with local queue, conflict resolution and barcode sync at 100k+ scale. |
+| **ZKTeco Biometric Integration** | Device auto-discovery via network scan, persistent attendance queue and monitoring with automatic retries. |
+| **Offline Odoo Installer for Windows** | PyInstaller + Inno Setup package that deploys with zero internet dependency for sites with unstable connectivity. |
 
 ---
 
-### 🚀 What I've built
+## Tech Stack
 
-Most of my day-to-day work lives in private company repositories, so here's what I've actually shipped in production:
+<div align="center">
 
-- **📊 Statistical Replenishment Engine** — max/min stock system with safety stock, reorder point and per-warehouse coverage, running as an automated nightly job that creates and updates replenishment rules for hundreds of thousands of products.
-- **🧾 SRI E-Invoicing Import (Ecuador)** — parses authorized XML invoices, reconciles taxes (VAT, ICE, withholdings) and validates against the authorized total, with cent-level auto-correction on posting.
-- **🔄 Odoo ↔ External ERP Integration + Offline POS** — two-way sync of products, purchase orders, withholdings and inter-warehouse transfers over REST APIs, plus an offline point of sale with local queue, conflict resolution and barcode sync at 100k+ scale.
-- **🖐️ ZKTeco Biometric Integration** — device auto-discovery via network scan, persistent attendance queue and monitoring with automatic retries.
-- **📦 Offline Odoo Installer for Windows** — built with PyInstaller + Inno Setup to deploy with zero internet dependency for clients with unstable connectivity.
+**Backend**<br/>
+<img src="https://skillicons.dev/icons?i=python,django,flask,nodejs&theme=dark" alt="Backend" />
+<img src="https://img.shields.io/badge/Odoo-714B67?style=for-the-badge&logo=odoo&logoColor=white" alt="Odoo" height="48" />
 
----
+**Data and Infrastructure**<br/>
+<img src="https://skillicons.dev/icons?i=postgres,docker,aws,linux,git&theme=dark" alt="Data and infrastructure" />
 
-### 🐍 Watch my commits get eaten
+**Frontend**<br/>
+<img src="https://skillicons.dev/icons?i=js&theme=dark" alt="Frontend" />
 
-![snake gif](https://raw.githubusercontent.com/KleverFront/KleverFront/output/github-contribution-grid-snake-dark.svg)
-
-<p align="center"><sub>🐍 chasing 900+ commits and counting</sub></p>
+</div>
 
 ---
 
+## Contributions
 
-<p align="center">
-  📫 <b>kleverontaneda@gmail.com</b> ·
-  <a href="https://www.linkedin.com/in/klever-ontaneda-loja-ecuador">LinkedIn</a> ·
-  🌎 Loja, Ecuador — open to <b>remote</b> backend roles
-</p>
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/KleverFront/KleverFront/output/skyline.svg" alt="Contribution calendar rendered as a rainy isometric city" width="100%" />
+
+<sub>Every building is a day of commits. Regenerated twice a day.</sub>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="assets/piano.svg" width="420" alt="Piano playing a slow jazz phrase on a rainy night" />
+
+<sub>Every line shipped with <a href="https://www.youtube.com/watch?v=K1hqAA063oo">1950s jazz noir</a> playing in the background.</sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=0:1a3a6b,100:0d1117&section=footer" alt="" width="100%" />
+
+</div>
